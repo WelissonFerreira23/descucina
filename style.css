@@ -1,0 +1,328 @@
+/* Estilos Globais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFFFFF; /* Fundo branco para um visual limpo */
+    color: #333333; /* Texto um pouco mais suave para reduzir contraste */
+    font-size: 1rem; /* Tamanho de fonte padrão em rem para escalabilidade */
+    line-height: 1.6;
+    padding-top: 150px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+
+/* Container Principal */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #2d2c2c; /* Cor sólida para contraste adequado */
+    z-index: 1000;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    height: 60px;
+}
+
+.logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin-left: 1.5rem; /* Espaço maior entre itens para acessibilidade */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    padding: 0.5rem; /* Adiciona espaço ao redor dos links */
+}
+
+nav ul li a:hover {
+    color: #C0392B;
+}
+
+nav ul li a:focus {
+    color: #FF6347; /* Destaque adicional para acessibilidade */
+}
+
+/* Seção Hero */
+.hero {
+    background: #000 url('imagens/risotto-de-alcachofra-com-lagosta.jpg') no-repeat center center/cover;
+    color: #FFFFFF;
+    padding: 6rem 1rem; /* Ajusta o padding para telas menores */
+    text-align: center;
+    position: relative;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+    max-width: 80%; /* Ajusta o max-width para telas menores */
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content a {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    padding: 10px;
+}
+
+.cta-button {
+    background-color: #C0392B;
+    color: #FFFFFF;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #A93226;
+}
+
+.cta-button:focus {
+    background-color: #FF6347; /* Efeito de foco mais acessível */
+}
+
+/* Seções do Conteúdo */
+.sobre, .menu, .reservas, .contato {
+    padding: 4rem 1rem; /* Ajusta o padding para garantir espaçamento em telas menores */
+    text-align: center;
+}
+
+.sobre h2, .menu h2, .reservas h2, .contato h2 {
+    color: #C0392B;
+    font-size: 2rem;
+    margin-bottom: 1.5rem; /* Mais espaço para separação visual */
+    padding: 10px;
+}
+
+.sobre .team {
+    margin-top: 1.5rem;
+}
+
+.sobre img, .menu img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.team-img {
+    margin-bottom: 20px;
+}
+
+/* Estilo para a seção de Horário de Funcionamento */
+.horario-funcionamento {
+    background-color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Centraliza a seção horizontalmente */
+    max-width: 800px;
+}
+
+.horario-funcionamento h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.horario-funcionamento ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #555;
+}
+
+.horario-funcionamento ul li {
+    margin-bottom: 10px;
+}
+
+.horario-funcionamento ul li span {
+    font-weight: bold;
+    color: #ff6347; /* Cor vibrante para destacar os dias da semana */
+}
+
+/* Rodapé */
+footer {
+    background-color: #2d2c2c;
+    padding: 1.5rem 0;
+    text-align: center;
+    border-top: 2px solid #ddd;
+    color: #FFFFFF;
+}
+
+/* Ícones de Redes Sociais */
+.social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    margin: 0 12px;
+    text-decoration: none;
+}
+
+.social-media a {
+    font-size:  2rem;  /* Tamanho do ícone */
+    color: #C0392B;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.social-media a:hover {
+    color: #FF6347;  /* Cor de destaque */
+    transform: scale(1.1); /* Efeito de zoom suave */
+}
+
+.social-media a:focus {
+    outline: 2px dashed #FF6347; /* Indicação visual de foco */
+}
+
+/* Responsividade para Dispositivos */
+
+@media (orientation: landscape) {
+    body {
+        flex-direction: row;
+    }
+}
+
+@media (orientation: portrait) {
+    body {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    /* Computadores (Desktop) */
+    .hero {
+        padding: 6rem 2rem;
+    }
+
+    .cta-button {
+        padding: 0.75rem 2rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Tablets */
+    .hero {
+        padding: 4rem 2rem;
+    }
+
+    .hero-content {
+        max-width: 85%;
+    }
+
+    .menu-item {
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem 0;
+    }
+
+    .menu-item img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .sobre img, .menu img {
+        max-width: 100%;
+    }
+
+    form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* Celulares */
+    body {
+        font-size: 0.875rem; /* Ajusta o tamanho da fonte para dispositivos muito pequenos */
+    }
+
+    .logo {
+        height: 40px; /* Ajusta a altura da logo para telas muito pequenas */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Espaço menor entre itens em telas muito pequenas */
+    }
+
+    .cta-button {
+        padding: 0.5rem 1.5rem; /* Ajusta o tamanho do botão para telas menores */
+    }
+
+    .hero {
+        padding: 4rem 1rem;
+    }
+
+    .horario-funcionamento h3 {
+        font-size: 1.6em;
+    }
+
+    .horario-funcionamento ul {
+        font-size: 1em;
+    }
+
+    .social-media a {
+        font-size: 1.5rem; /* Reduz o tamanho dos ícones em telas pequenas */
+    }
+
+    footer {
+        padding: 1rem 0;
+    }
+}

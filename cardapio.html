@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore o menu sofisticado do restaurante Des Cucina em São Paulo. Pratos exclusivos de alta gastronomia.">
+    <meta name="keywords" content="Des Cucina, restaurante São Paulo, alta gastronomia, risotos, carnes, frutos do mar, menu italiano">
+    <meta name="author" content="Des Cucina">
+    <title>Menu - Des Cucina</title>
+    <style>
+        /* Estilo global */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e8dabb;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #2d2c2c;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            max-width: 120px;
+        }
+
+        nav {
+            margin-top: 20px;
+        }
+
+        nav ul {
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li {
+            margin: 10px 0;
+        }
+
+        nav ul li a {
+            color: #fafafa;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+            color: #e0c08c;
+        }
+
+        nav ul li a.active {
+            font-weight: bold;
+            border-bottom: 2px solid #e0c08c;
+            color: #e0c08c;
+            box-shadow: 0 2px 5px rgba(224, 192, 140, 0.5);
+        }
+
+        .menu-section {
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #e0c08c;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .menu-section h2 {
+            text-align: center;
+            font-size: 1.8em;
+            color: #444;
+            margin: 10px 0 20px;
+            font-style: italic;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 10px;
+        }
+
+        .menu-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-section ul li {
+            font-size: 1.2em;
+            padding: 15px 10px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .menu-section ul li span {
+            float: right;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .menu-section ul li:last-child {
+            border-bottom: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f8f8;
+            color: #888;
+            font-size: 0.9em;
+            margin-top: 20px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Efeito de hover */
+        .menu-section ul li:hover {
+            background-color: #f9f9f9;
+            cursor: pointer;
+        }
+
+        /* Botão de voltar ao topo */
+        #backToTop {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #555;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 50%;
+            font-size: 1.5em;
+            cursor: pointer;
+            display: none;
+        }
+
+        #backToTop:hover {
+            background-color: #d0a76d;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .menu-section {
+                padding: 10px;
+            }
+            .menu-section h2 {
+                font-size: 1.5em;
+            }
+            .menu-section ul li {
+                font-size: 1em;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav ul li {
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="imagens/des-logo.png" alt="Logo do restaurante Des Cucina, especializado em alta gastronomia em São Paulo"></a>
+        <button id="backToTop" title="Voltar ao Topo">↑</button>
+        <nav>
+            <ul>
+                <li><a href="#antepastos">A LA CARTE</a></li>
+                <li><a href="#entradas">SUGESTÃO DO CHEF</a></li>
+                <li><a href="#executivo">EXECUTIVO</a></li>
+                <li><a href="#vinhos">CARTA DE VINHOS</a></li>
+                <li><a href="#drinks">DRINKS</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Categorias do Menu -->
+    <section class="menu-section" id="antepastos">
+        <h2>Antepastos</h2>
+        <ul>
+            <li>Couvert <span>R$ 25,90</span></li>
+            <li>Bolinho trufado <span>R$ 57,00</span></li>
+            <li>Camarão e lula crocantes <span>R$ 84,00</span></li>
+            <li>Canapé de carpaccio <span>R$ 46,00</span></li>
+            <li>Canapé de cebola e parmesão <span>R$ 38,00</span></li>
+            <li>Profiterole recheado com queijo brie <span>R$ 51,00</span></li>
+        </ul>
+    </section>
+
+    <section class="menu-section" id="entradas">
+        <h2>Entradas</h2>
+        <ul>
+            <li>Tartar de atum com palmito pupunha e molho tarê <span>R$ 78,00</span></li>
+            <li>Burrata caprese alla Des Cucina <span>R$ 76,00</span></li>
+            <li>Carpaccio de carne clássico <span>R$ 50,00</span></li>
+            <li>Carpaccio de carne gratinado, molho de shitake, funghi e azeite trufado <span>R$ 79,00</span></li>
+            <li>Ceviche de peixe branco e camarões <span>R$ 76,00</span></li>
+        </ul>
+    </section>
+
+    <section class="menu-section" id="pastas">
+        <h2>Pastas</h2>
+        <ul>
+            <li>Agnolotti recheado com burrata, limão siciliano e sugo de tomate fresco <span>R$ 72,00</span></li>
+            <li>Capelletti de cordeiro com fonduta de queijo taleggio <span>R$ 72,00</span></li>
+            <li>Gnocchi de batata, fonduta de queijo parmesão, azeite trufado, rúcula orgânica e presunto cru <span>R$ 75,00</span></li>
+            <li>Gnocchi de mandioquinha com ragu de linguiça de Bragança <span>R$ 74,00</span></li>
+        </ul>
+    </section>
+
+    <section class="menu-section" id="do-mar">
+        <h2>Do Mar</h2>
+        <ul>
+            <li>Arroz negro com boldoaze de legumes e lula salteada <span>R$ 86,00</span></li>
+            <li>Atum em crosta de gergelim com purê de batata, gengibre e molho cítrico <span>R$ 124,00</span></li>
+            <li>Filé de linguado com molho de camarão e aspargos ao trifolati e purê de batata <span>R$ 118,00</span></li>
+            <li>Pescada amarela com risoto de limão siciliano <span>R$ 119,00</span></li>
+            <li>Polvo grelhado e arroz vermelho <span>R$ 149,00</span></li>
+        </ul>
+    </section>
+
+    <section class="menu-section" id="risotos">
+        <h2>Risotos</h2>
+        <ul>
+            <li>Risoto de camarão com manjericão <span>R$ 79,00</span></li>
+            <li>Risoto de cogumelos com molho trufado <span>R$ 78,00</span></li>
+            <li>Risoto de abóbora com ricota e amêndoas <span>R$ 72,00</span></li>
+        </ul>
+    </section>
+
+    <section class="menu-section" id="carnes">
+        <h2>Carnes</h2>
+        <ul>
+            <li>Costa de cordeiro com purê de batata e alho negro <span>R$ 156,00</span></li>
+            <li>Filet mignon com purê de batata e farofa de alho e bacon <span>R$ 118,00</span></li>
+            <li>Entrecot com molho de mostarda e purê de batata <span>R$ 126,00</span></li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Des Cucina | Todos os direitos reservados</p>
+    </footer>
+
+    <script>
+        // Função para mostrar o botão de voltar ao topo
+        window.onscroll = function() {
+            const backToTopButton = document.getElementById('backToTop');
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        };
+
+        // Função para voltar ao topo
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+    
+    <script>
+    const sections = document.querySelectorAll('section'); // Seleciona todas as seções
+    const navLinks = document.querySelectorAll('nav ul li a'); // Seleciona todos os links do menu
+
+    window.addEventListener('scroll', () => {
+        let current = ''; // Armazena o ID da seção visível
+
+        // Verifica qual seção está visível
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop; // Posição do topo da seção
+            const sectionHeight = section.offsetHeight; // Altura da seção
+
+            // Determina se a rolagem está dentro da seção
+            if (pageYOffset >= sectionTop - 60 && pageYOffset < sectionTop + sectionHeight) {
+                current = section.getAttribute('id'); // Armazena o ID da seção ativa
+            }
+        });
+
+        // Atualiza os links do menu
+        navLinks.forEach(link => {
+            link.classList.remove('active'); // Remove a classe 'active' de todos os links
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active'); // Adiciona a classe ao link correspondente
+            }
+        });
+    });
+    </script>
+</body>
+</html>
